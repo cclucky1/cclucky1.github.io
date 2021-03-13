@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Hi,I’m CCCChen">
+<meta name="description" content="1234567891011121314151617181920212223242526272829303132package hashCode;&#x2F;*    哈希值：是一个十进制的整数，由系统随即给出（就是对象的地址值，是一个逻辑地址，是模拟出来得到地址，不是数据实际存储的物理地址）    在Object类有一个方法，可以获取对象的哈希值    hashCode方法的源码：        publi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome To My Blog">
-<meta property="og:url" content="http://example.com/2021/03/13/hello-world/index.html">
+<meta property="og:title" content="hashCode Demo">
+<meta property="og:url" content="http://example.com/2021/03/13/hashCode/index.html">
 <meta property="og:site_name" content="CCCChen&#39;s Blog">
-<meta property="og:description" content="Hi,I’m CCCChen">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132package hashCode;&#x2F;*    哈希值：是一个十进制的整数，由系统随即给出（就是对象的地址值，是一个逻辑地址，是模拟出来得到地址，不是数据实际存储的物理地址）    在Object类有一个方法，可以获取对象的哈希值    hashCode方法的源码：        publi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-13T07:35:37.029Z">
-<meta property="article:modified_time" content="2021-03-13T07:35:37.061Z">
+<meta property="article:published_time" content="2021-03-13T08:12:11.000Z">
+<meta property="article:modified_time" content="2021-03-13T08:14:15.731Z">
 <meta property="article:author" content="CCCChen">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2021/03/13/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2021/03/13/hashCode/"/>
 
 
 
 
 
-  <title>Welcome To My Blog | CCCChen's Blog</title>
+  <title>hashCode Demo | CCCChen's Blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/hashCode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Welcome To My Blog</h1>
+          <h1 class="post-title" itemprop="name headline">hashCode Demo</h1>
         
 
         <div class="post-meta">
@@ -261,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-13T15:35:37+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-13T16:12:11+08:00">
                 2021-03-13
               </time>
             
@@ -299,7 +299,9 @@
       
 
       
-        <p>Hi,I’m CCCChen</p>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hashCode;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    哈希值：是一个十进制的整数，由系统随即给出（就是对象的地址值，是一个逻辑地址，是模拟出来得到地址，不是数据实际存储的物理地址）</span></span><br><span class="line"><span class="comment">    在Object类有一个方法，可以获取对象的哈希值</span></span><br><span class="line"><span class="comment">    hashCode方法的源码：</span></span><br><span class="line"><span class="comment">        public native int hashCode();</span></span><br><span class="line"><span class="comment">        native：代表该方法调用的是本地操作系统的方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01HashCode</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="keyword">int</span> h1 = p1.hashCode();</span><br><span class="line">        System.out.println(h1);<span class="comment">//1163157884</span></span><br><span class="line"></span><br><span class="line">        Person p2= <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="keyword">int</span> h2 = p2.hashCode();</span><br><span class="line">        System.out.println(h2);<span class="comment">//1956725890</span></span><br><span class="line"></span><br><span class="line">        System.out.println(p1);<span class="comment">//day01.demo05.hashCode.Person@4554617c</span></span><br><span class="line">        System.out.println(p2);<span class="comment">//day01.demo05.hashCode.Person@74a14482</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        String类的哈希值</span></span><br><span class="line"><span class="comment">            String类重写了Object类的hashCode方法</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        String s1= <span class="keyword">new</span> String(<span class="string">&quot;CCCChen&quot;</span>);</span><br><span class="line">        String s2 = <span class="keyword">new</span> String(<span class="string">&quot;CCCChen&quot;</span>);</span><br><span class="line">        System.out.println(s1.hashCode());</span><br><span class="line">        System.out.println(s2.hashCode());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
 
       
     </div>
@@ -324,14 +326,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2021/03/13/hello-world/" rel="next" title="Welcome To My Blog">
+                <i class="fa fa-chevron-left"></i> Welcome To My Blog
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/03/13/hashCode/" rel="prev" title="hashCode Demo">
-                hashCode Demo <i class="fa fa-chevron-right"></i>
+              <a href="/2021/03/13/Map%E9%9B%86%E5%90%88/" rel="prev" title="Map集合">
+                Map集合 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
