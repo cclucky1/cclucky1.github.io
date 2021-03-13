@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940package demo03.Map;import java.util.HashMap;import java.util.Hashtable;import java.util.Iterator;import java.util.Map;&#x2F;*    java.">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455package demo03.Map;import java.util.HashMap;import java.util.Iterator;import java.util.Map;import j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HashTable">
-<meta property="og:url" content="http://example.com/2021/03/13/HashTable/index.html">
+<meta property="og:title" content="MapTest">
+<meta property="og:url" content="http://example.com/2021/03/13/MapTest/index.html">
 <meta property="og:site_name" content="CCCChen&#39;s Blog">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940package demo03.Map;import java.util.HashMap;import java.util.Hashtable;import java.util.Iterator;import java.util.Map;&#x2F;*    java.">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455package demo03.Map;import java.util.HashMap;import java.util.Iterator;import java.util.Map;import j">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-13T08:21:29.000Z">
-<meta property="article:modified_time" content="2021-03-13T08:21:59.473Z">
+<meta property="article:published_time" content="2021-03-13T08:28:24.000Z">
+<meta property="article:modified_time" content="2021-03-13T08:28:56.176Z">
 <meta property="article:author" content="CCCChen">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2021/03/13/HashTable/"/>
+  <link rel="canonical" href="http://example.com/2021/03/13/MapTest/"/>
 
 
 
 
 
-  <title>HashTable | CCCChen's Blog</title>
+  <title>MapTest | CCCChen's Blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/HashTable/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/MapTest/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HashTable</h1>
+          <h1 class="post-title" itemprop="name headline">MapTest</h1>
         
 
         <div class="post-meta">
@@ -261,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-13T16:21:29+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-13T16:28:24+08:00">
                 2021-03-13
               </time>
             
@@ -299,7 +299,7 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo03.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Hashtable;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    java.util.HashTable&lt;K,V&gt;集合 implements Map&lt;K,V&gt;接口</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    HashTable:底层也是一个哈希表,是一个线程不安全的集合,是单线程的集合,速度慢</span></span><br><span class="line"><span class="comment">    HashMap:底层是一个哈希表,是一个线程不安全的集合,是多线程的集合,速度快</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    HashMap集合(之前学的所有集合):可以存储null值,null键</span></span><br><span class="line"><span class="comment">    HashTable集合,不能存储null值,null键</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    HashTable和Vector集合一样在1.2版本之后被更先进的集合(HashMap,ArrayList)取代</span></span><br><span class="line"><span class="comment">    HashTable的子类Properties依然活跃在历史的舞台</span></span><br><span class="line"><span class="comment">    Properties集合是一个唯一和IO流相结合的集合</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02HashTable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="keyword">null</span>,<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&quot;a&quot;</span>,<span class="keyword">null</span>);</span><br><span class="line">        Iterator&lt;Map.Entry&lt;String, String&gt;&gt; it1 = map.entrySet().iterator();</span><br><span class="line">        <span class="keyword">while</span> (it1.hasNext())&#123;</span><br><span class="line">            System.out.println(it1.next());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Hashtable&lt;String,String&gt; hmap = <span class="keyword">new</span> Hashtable&lt;&gt;();</span><br><span class="line">        hmap.put(<span class="string">&quot;s&quot;</span>,<span class="string">&quot;q&quot;</span>);</span><br><span class="line">        hmap.put(<span class="string">&quot;w&quot;</span>,<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        Iterator&lt;Map.Entry&lt;String, String&gt;&gt; it2 = hmap.entrySet().iterator();</span><br><span class="line">        <span class="keyword">while</span> (it2.hasNext())&#123;</span><br><span class="line">            System.out.println(it2.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo03.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    练习:</span></span><br><span class="line"><span class="comment">        计算一个字符串中每个字符出现的次数</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    分析:</span></span><br><span class="line"><span class="comment">        1.使用Scanner获取用户输入的字符串</span></span><br><span class="line"><span class="comment">        2.创建一个Map集合,key是字符串中的字符,value是字符的个数</span></span><br><span class="line"><span class="comment">        3.遍历字符串获取每一个字符</span></span><br><span class="line"><span class="comment">        4.使用获取到的字符,去Map集合判断key是否存在</span></span><br><span class="line"><span class="comment">            key存在:</span></span><br><span class="line"><span class="comment">                通过字符(key),获取value(字符个数)</span></span><br><span class="line"><span class="comment">                value++</span></span><br><span class="line"><span class="comment">                put(key,value)把新的value存储到Map集合中</span></span><br><span class="line"><span class="comment">            key不存在:</span></span><br><span class="line"><span class="comment">            put(key,1)</span></span><br><span class="line"><span class="comment">        5.遍历Map集合,输出结果</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo03MapTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;输入一个字符串:&quot;</span>);</span><br><span class="line">        String s = sc.next();</span><br><span class="line"></span><br><span class="line">        HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="comment">//使用获取到的字符,去Map集合判断key是否存在</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            <span class="comment">/*key存在:</span></span><br><span class="line"><span class="comment">            通过字符(key),获取value(字符个数)</span></span><br><span class="line"><span class="comment">            value++</span></span><br><span class="line"><span class="comment">            put(key,value)把新的value存储到Map集合中*/</span></span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(c)) &#123;</span><br><span class="line">                Integer value = map.get(c);</span><br><span class="line">                value++;</span><br><span class="line">                map.put(c, value);</span><br><span class="line">                <span class="comment">/*key不存在:</span></span><br><span class="line"><span class="comment">                put(key,1) */</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                map.put(c, <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历Map集合,输出结果</span></span><br><span class="line">        Iterator&lt;Map.Entry&lt;Character, Integer&gt;&gt; it = map.entrySet().iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">            System.out.println(it.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -326,8 +326,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/03/13/EntrySet/" rel="next" title="EntrySet">
-                <i class="fa fa-chevron-left"></i> EntrySet
+              <a href="/2021/03/13/%E6%96%97%E5%9C%B0%E4%B8%BB%E6%A1%88%E4%BE%8B%E5%AE%9E%E7%8E%B0/" rel="next" title="斗地主案例实现">
+                <i class="fa fa-chevron-left"></i> 斗地主案例实现
               </a>
             
           </div>
@@ -335,10 +335,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/03/13/%E6%96%97%E5%9C%B0%E4%B8%BB%E6%A1%88%E4%BE%8B%E5%AE%9E%E7%8E%B0/" rel="prev" title="斗地主案例实现">
-                斗地主案例实现 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
